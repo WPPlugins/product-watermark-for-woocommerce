@@ -1,0 +1,128 @@
+.br_settings .nav-block{
+    display: none;
+}
+.br_settings .nav-block.nav-block-active{
+    display: block;
+}
+.br_settings textarea{
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+}
+.br_saved,
+.br_not_saved{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 9999999;
+    color: #333333;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation-name: br_saved_anim;
+    animation-duration: 0.2s;
+    transition: background-color 0.6s;
+    transition: box-shadow 0.6s;
+}
+@keyframes br_saved_anim {
+    from {
+        right: -50px;
+    }
+
+    to {
+        right: 50px;
+    }
+}
+.br_saved_remove {
+    animation-name: br_saved_remove_anim;
+    animation-duration: 0.2s;
+}
+@keyframes br_saved_remove_anim {
+    from {
+        right: 50px;
+    }
+
+    to {
+        right: -50px;
+    }
+}
+.br_saved{
+    box-shadow: 1px 1px 3px 1px #55ff55 inset, 0 0 5px 0;
+    background-color: #33bb33;
+}
+.br_not_saved{
+    box-shadow: 1px 1px 3px 1px #ff5555 inset, 0 0 5px 0;
+    background-color: #bb3333!important;
+}
+.br_saving {
+    box-shadow: 1px 1px 3px 1px #cfcfcf inset, 0 0 5px 0;
+    background-color: #bbbbbb!important;
+}
+.br_saved .fa,
+.br_not_saved .fa{
+    width: 50px;
+    display: block;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+}
+.br_saved .fa-check,
+.br_not_saved .fa-times{
+    animation-name: br_saved_anim_fa;
+    animation-duration: 0.4s;
+}
+@keyframes br_saved_anim_fa {
+    0% {
+        font-size: 0px;
+    }
+
+    50% {
+        font-size: 0px;
+    }
+
+    100% {
+        font-size: 32px;
+    }
+}
+.br_watermark_parent {
+    border:1px solid black;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.br_watermark {
+    cursor: move;
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.image_watermark_submit_form .berocket_aapf_selected_icon_show {
+    display: block;
+}
+.image_watermark_submit_form .berocket_aapf_selected_icon_show img {
+    max-width: 200px;
+    max-height: 200px;
+}
+.font_colorpick {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+}
+.berocket_image_count_all {
+    width: 300px;
+    display: inline-block;
+}
+.colorpicker_field, .colorpicker_field_sc {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: relative!important;
+}
